@@ -1,1 +1,4 @@
-remote_theme: Corotyest/lecoro-docs
+remote_theme: niklasbuschmann/contrast
+show_excerpts: true
+show_frame: true
+show_sidebar: true
