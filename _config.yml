@@ -2,7 +2,3 @@ remote_theme: niklasbuschmann/contrast@v2.11
 
 plugins:
   - jekyll-remote-theme
-  
-show_excerpts: true
-show_frame: true
-show_sidebar: true
