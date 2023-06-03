@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Get User Location</title>
+  <title>Amazon-like Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+  <header>
+        <div class="navbar">
+            <img src="amazon_logo.png" alt="Amazon Logo">
+            <div class="location-btn" onclick="showLocationPopup()">Share Location</div>
+        </div>
+    </header>
+
+    <div class="content">
+        <!-- Your website content here -->
+    </div>
+
+    <div id="location-popup" class="popup">
+        <div class="popup-content">
+            <h2>Location Sharing</h2>
+            <p>We need your location to provide better services.</p>
+            <button onclick="getLocation()">Share My Location</button>
+        </div>
+    </div>
   <script>
     function reverseGeocode(latitude, longitude) {
       const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
@@ -54,7 +74,6 @@
     }
 
     // Call the function to get the user's location
-    getLocation();
   </script>
 </body>
 </html>
