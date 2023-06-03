@@ -4,6 +4,25 @@
   <title>Amazon-like Website</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+  <style>
+    /* CSS styling for the menu */
+    .menu {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .menu li a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,7 +33,21 @@
     </header>
 
     <div class="content">
-        <!-- Your website content here -->
+        <ul class="menu">
+        <li><a href="#">Skincare</a></li>
+        <li><a href="#">Makeup</a></li>
+        <li><a href="#">Haircare</a></li>
+        <li><a href="#">Fragrance</a></li>
+        <li><a href="#">Tools &amp; Accessories</a></li>
+        <li><a href="#">Men's Grooming</a></li>
+        <li><a href="#">Bath &amp; Body</a></li>
+        <li><a href="#">Wellness</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        <li><a href="#">Deals &amp; Promotions</a></li>
+      </ul>
+
+      <!-- Reference Image -->
+      <img src="no-load.jpg" alt="Beauty Menu Reference Image">
     </div>
 
     <div id="location-popup" class="popup">
