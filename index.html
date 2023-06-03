@@ -5,6 +5,21 @@
 </head>
 <body>
   <script>
+    function reverseGeocode(latitude, longitude) {
+      const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const address = data.display_name;
+          console.log('Address:', address);
+          // Perform further actions with the address
+        })
+        .catch(error => {
+          console.log('Error:', error);
+        });
+    }
+    
     function getLocation() {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -16,8 +31,7 @@
     function showPosition(position) {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-      console.log("Latitude: " + latitude);
-      console.log("Longitude: " + longitude);
+      reverseGeocode(latitude, longitude);
 
       // You can perform further actions with the latitude and longitude values
     }
